@@ -1,3 +1,4 @@
 {
-    "workbench.fontAliasing": "antialiased"
+    "workbench.fontAliasing": "antialiased",
+    "editor.tabSize": 2
 }
