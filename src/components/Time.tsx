@@ -1,6 +1,6 @@
 function Time({ ms }: { ms: number }) {
     return (
-        <h2>{msToString(ms)}</h2>
+        <h2 className="center">{msToString(ms)}</h2>
     );
 }
 

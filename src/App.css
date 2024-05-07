@@ -41,3 +41,7 @@
   display: flex; /* Use flexbox */
   flex-direction: column; /* Set direction to column */
 }
+
+.center {
+  align-self: center;
+}
