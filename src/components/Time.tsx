@@ -1,6 +1,6 @@
-function Time({ ms }: { ms: number }) {
+function Time({ ms, style }: { ms: number, style?: React.CSSProperties }) {
     return (
-        <h2 className="center">{msToString(ms)}</h2>
+        <div className="time-container" style={style}><h2 className="center time">{msToString(ms)}</h2></div>
     );
 }
 

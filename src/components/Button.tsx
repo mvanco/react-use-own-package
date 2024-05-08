@@ -1,6 +1,8 @@
-function Button({ text, onClick }: { text: string, onClick: () => void }) {
+import { CSSProperties } from "react";
+
+function Button({ text, onClick, style }: { text: string, onClick: () => void, style?: CSSProperties}) {
   return (
-      <button onClick={onClick}>{text}</button>
+      <button className="button" onClick={onClick} style={style}>{text}</button>
   );
 }
 

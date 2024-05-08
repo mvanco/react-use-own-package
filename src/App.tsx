@@ -47,9 +47,9 @@ function App() {
   return (
     <>
       <body>
-        <div className="vertical-linear-layout">
-          <Time ms={ms} />
-          <Button text={(running) ? "Stop" : "Start"} onClick={() => {
+        <div id="root" className="vertical-linear-layout">
+          <Time ms={ms} style={{ flex: 1}}/>
+          <Button text={(running) ? "Stop" : "Start"} style={{ flex: 1}} onClick={() => {
             try {
               if (running) {
                 fetch('https://matoosh.eu/rest/timer/stop', {
@@ -75,7 +75,7 @@ function App() {
             }
             setRunning(!running);
           }} />
-          <Button text="Reset" onClick={() => {
+          <Button text="Reset" style={{ flex: 1}} onClick={() => {
             fetch('https://matoosh.eu/rest/timer/reset', {
               method: 'POST',
               headers: {
