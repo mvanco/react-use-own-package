@@ -39,7 +39,7 @@
   font-size: var(--large-font-size);
   border: 8px;
   border-style:solid;
-  padding: 64px;
+  padding: 32px 64px 32px 64px;
   border-radius: 16px;
 }
 
@@ -49,14 +49,6 @@
   justify-content: center;
   align-items: center;
 
-}
-
-.green {
-  background-color: #00aa00ff;
-}
-
-.red {
-  background-color: red;
 }
 
 @keyframes App-logo-spin {
