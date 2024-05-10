@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [ms, setMs] = useState(0);
+  const [running, setRunning] = useState(true);
 
   const fetchData = async () => {
     try {
@@ -27,12 +28,11 @@ function App() {
       const data = await response.json();
       console.error('Got data: ', data.result);
       setMs(data.result * 1000);
+      setRunning(data.running);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
-
-  const [running, setRunning] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -53,21 +53,11 @@ function App() {
             try {
               if (running) {
                 fetch('https://matoosh.eu/rest/timer/stop', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify({
-                  }),
+                  method: 'POST'
                 });
               } else {
                 fetch('https://matoosh.eu/rest/timer/start', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify({
-                  }),
+                  method: 'POST'
                 });
               }
             } catch (error) {
