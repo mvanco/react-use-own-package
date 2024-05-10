@@ -38,7 +38,25 @@
 .button {
   font-size: var(--large-font-size);
   border: 8px;
-  padding: 0px;
+  border-style:solid;
+  padding: 64px;
+  border-radius: 16px;
+}
+
+.Button-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.green {
+  background-color: #00aa00ff;
+}
+
+.red {
+  background-color: red;
 }
 
 @keyframes App-logo-spin {
@@ -60,7 +78,7 @@
 }
 
 .time {
-  font-size: 3em;
+  font-size: 4em;
   margin: 0px;
 }
 

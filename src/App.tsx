@@ -4,6 +4,7 @@ import "./App.css";
 import myurl from "mvanco-react-typescript";
 import Time from "./components/Time";
 import Button from "./components/Button";
+import LaunchButton from "./components/LaunchButton";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -48,8 +49,8 @@ function App() {
     <>
       <body>
         <div id="root" className="vertical-linear-layout">
-          <Time ms={ms} style={{ flex: 1}}/>
-          <Button text={(running) ? "Stop" : "Start"} style={{ flex: 1}} onClick={() => {
+          <Time ms={ms} style={(running) ? { flex: 1} : { flex: 1, color: "red"}}/>
+          <LaunchButton type={(running) ? "stop" : "start"} onClick={() => {
             try {
               if (running) {
                 fetch('https://matoosh.eu/rest/timer/stop', {
@@ -65,7 +66,7 @@ function App() {
             }
             setRunning(!running);
           }} />
-          <Button text="Reset" style={{ flex: 1}} onClick={() => {
+          <LaunchButton type="reset" onClick={() => {
             fetch('https://matoosh.eu/rest/timer/reset', {
               method: 'POST',
               headers: {
