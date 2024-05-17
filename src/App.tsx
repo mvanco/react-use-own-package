@@ -56,6 +56,8 @@ function App() {
                 fetch('https://matoosh.eu/rest/timer/stop', {
                   method: 'POST'
                 });
+
+                
               } else {
                 fetch('https://matoosh.eu/rest/timer/start', {
                   method: 'POST'

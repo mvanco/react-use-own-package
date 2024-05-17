@@ -37,8 +37,10 @@
 
 .button {
   font-size: var(--large-font-size);
+  color: black;
   border: 8px;
   border-style:solid;
+  border-color: black;
   padding: 32px 64px 32px 64px;
   border-radius: 16px;
 }
@@ -87,6 +89,6 @@ body, html {
 }
 
 #root {
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
 }
